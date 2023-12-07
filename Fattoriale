@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+class Fattoriale{
+	public static void main(String[] args) {
+  	 
+    	long n,num;
+  	 
+   	Scanner write = new Scanner(System.in);  
+  	 
+   	System.out.println("Inserisci un numero");
+        	n = write.nextLong();
+       	 
+        	num = n*(n-1);
+       	 
+        	for(long i=n-2; i>0;i--){
+           	 
+            	num=num*i;
+           	 
+           	 
+        	}
+   	System.out.println("Il risultato e: "+ num);
+	 
+	}
+}
