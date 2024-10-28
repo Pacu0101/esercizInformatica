@@ -46,10 +46,9 @@ public class FrontScreen {
             System.out.println(libro.FormattaDati());
     }
 
-    public static Boolean remove(ArrayList<Libro> mensola, String autore, String titolo) {
+    public static Boolean remove(ArrayList<Libro> mensola, String autore, String titolo) {  //Metodo che serve per rimuovere i libri
 
-        boolean removed = mensola.removeIf(libro -> autore.equals(libro.autore) && titolo.equals(libro.titolo));
-
-        return removed;
+        return mensola.removeIf(libro -> autore.equals(libro.autore) && titolo.equals(libro.titolo));
+    }
     }
 }
