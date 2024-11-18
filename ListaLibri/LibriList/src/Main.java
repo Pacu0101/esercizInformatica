@@ -16,7 +16,7 @@ public class Main {
         ArrayList<Libro> mensola = new ArrayList<>();
         final int MaxLibri = 3;
 
-        String[] opzioni = {"Menu", "1-Inserimento", "2-Visualizza", "3-Remove", "4-Exit"};
+        String[] opzioni = {"Menu", "1-Inserimento", "2-Visualizza", "3-Remove","4-Scorrimento", "5-Exit"};
         boolean exit = true;
         do {
             switch (Menu(opzioni, tastiera)) {
@@ -53,7 +53,16 @@ public class Main {
                     }
                 }
 
-                case 4 -> {
+                case 4 ->{
+                    int n;
+
+                        System.out.println("Inserisci la posizione iniziale");
+                        n = Integer.parseInt(tastiera.nextLine());
+
+                        FrontScreen.Scorrimemto(mensola,n,tastiera);
+                }
+
+                case 5 -> {
                     System.out.println("Fine");
                     exit = false;
                 }
@@ -63,4 +72,3 @@ public class Main {
 
 
 }
-
