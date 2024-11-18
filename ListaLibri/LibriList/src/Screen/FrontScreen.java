@@ -50,5 +50,55 @@ public class FrontScreen {
 
         return mensola.removeIf(libro -> autore.equals(libro.autore) && titolo.equals(libro.titolo));
     }
+
+    public static void Scorrimemto(ArrayList<Libro> mensola, int n,Scanner sc){
+
+        if (mensola.isEmpty()) {
+            System.out.println("La mensola è vuota!");
+            return;
+        }
+
+        if (n < 0 || n >= mensola.size()) {
+            System.out.println("Posizione iniziale non valida!");
+            return;
+        }
+
+        String[] opzioni = {"Scorrimento","1-Precedente","2-Successivo","3-Exit"};
+        boolean exit = true;
+        System.out.println("Libro corrente:");
+        System.out.println(mensola.get(n).FormattaDati());
+
+        do{
+            switch (Menu(opzioni,sc)){
+                case 1->{
+
+                    if (n > 0) {
+                        n--;
+                    } else {
+                        System.out.println("Sei già al primo libro!");
+                    }
+                    System.out.println("Libro corrente:");
+                    System.out.println(mensola.get(n).FormattaDati());
+                }
+
+                case 2->{
+
+                    if (n < mensola.size() - 1) {
+                        n++;
+                    } else {
+                        System.out.println("Sei già all'ultimo libro!");
+                    }
+                    System.out.println("Libro corrente:");
+                    System.out.println(mensola.get(n).FormattaDati());
+
+                }
+
+                case 3->{
+                    System.out.println("Fine");
+                    exit = false;
+                }
+            }
+        }while(exit);
+
     }
 }
