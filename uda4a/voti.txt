@@ -1,0 +1,6 @@
+studente1 = Nome1,Cognome1,8
+studente2 = Nome2,Cognome2,7
+studente3 = Nome3,Cognome3,6
+studente4 = Nome4,Cognome4,9
+studente5 = Nome5,Cognome5,4
+studente6 = Nome6,Cognome6,8

@@ -1,0 +1,11 @@
+body{
+    background: green;
+}
+
+#t1,th{
+    border: 1px solid black;
+}
+
+footer{
+    background: white;
+}
